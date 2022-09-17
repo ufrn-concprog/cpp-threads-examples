@@ -1,4 +1,4 @@
-# Programming with Java threads #
+# Programming with threads in C and C++ #
 
 ## About
 This repository contains a set of examples to demonstrate thread programming with C and C++.
