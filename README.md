@@ -46,7 +46,7 @@ In the operating system’s terminal, insert the following commands to download 
  cd cpp-threads-examples
 ```
 
-[*makefile*](Makefile) was built to receive an input parameter named as `example`, whose value is the filename (without extension) of the respective demonstration source code (located at the [`src`](src) directory) to be be compiled and executed. The following command must be inserted into the operating system's terminal to compile the demonstration program:
+The [Makefile](Makefile) was built to receive an input parameter named as `example`, whose value is the filename (without extension) of the respective demonstration source code (located at the [`src`](src) directory) to be be compiled and executed. The following command must be inserted into the operating system's terminal to compile the demonstration program:
 
 ```bash
  make example=filename
