@@ -1,9 +1,11 @@
 # Programming with threads in C and C++ #
 
 ## About
+
 This repository contains a set of examples to demonstrate thread programming with C and C++.
 
 ## Repository structure
+
 Each file in this repository demonstrates a different function for thread programming with C and C++. The files are organized according to the following structure:
 
 ```
@@ -14,7 +16,7 @@ Each file in this repository demonstrates a different function for thread progra
   ├─── doc                      ---> Directory where HTML documentation will be generated
   ├─── Makefile                 ---> Makefile for compilation
   └─── src                      ---> Directory with source code files
-       └─── pthread.c           ---> Demonstrating basic programming with POSIX Threads in C
+       └─── pthread-basic.c     ---> Demonstrating basic programming with POSIX Threads in C
        └─── thread-callback.cpp ---> Demonstrating creation of C++ threads with a parameterized callback function
        └─── thread-class.cpp    ---> Demonstrating creation of threads to run class instances upon operator overloading
        └─── thread-class2.cpp   ---> Demonstrating creation of threads to run class instances upon object and method references
@@ -24,6 +26,7 @@ Each file in this repository demonstrates a different function for thread progra
 ```
 
 ## Requirements
+
 For compiling and executing programs, the following elements must be properly installed on the development environment:
 
 - [Git](https://git-scm.com), as control version system
@@ -32,6 +35,7 @@ For compiling and executing programs, the following elements must be properly in
 - [Doxygen](https://www.doxygen.nl), for automatic documentation generation
 
 ## Download, compilation, and execution
+
 In the operating system’s terminal, insert the following commands to download the implementation from this Git repository and navigate to the resulting directory:
 
 ```bash
@@ -46,6 +50,12 @@ In the operating system’s terminal, insert the following commands to download 
 
 ```bash
  make example=filename
+```
+
+Specifically for the demonstration of C programs working with [POSIX Threads](http://pubs.opengroup.org/onlinepubs/007908799/xsh/pthread.h.html) (the so-called *pthreads*), the `make` command requires an additional argument referring to the target to compile this kind of example:
+
+```bash
+ make example=filename pthread
 ```
 
 Note that the value for parameter `example` must be **exactly identical** to the filename of the source codes. If the parameter is not provided, the command `make` will do nothing. If the value does not correspond to the existing source codes, the command `make` will report an error point out that there is no defined rule for this parameter. 
