@@ -1,3 +1,4 @@
 .DS_Store
 .vscode/
 pthread.dSYM/
+src/pthread-basic.dSYM/
