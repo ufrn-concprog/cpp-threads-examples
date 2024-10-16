@@ -4,7 +4,7 @@
  * @author	Everton Cavalcante (everton.cavalcante@ufrn.br)
  * @since	November 29, 2021
  * @date	September 17, 2022
- */ake
+ */
 
 #include <chrono>
 #include <cstdlib>
