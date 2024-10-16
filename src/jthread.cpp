@@ -22,7 +22,7 @@ using namespace std;
  * @details This is a callback function to run upon a thread
  * @param id Thread's ID
  */
-void sleep(int id) {
+void to_sleep(int id) {
 	int seconds = rand() % 5 + 1;
 	cout << "Suspending thread " << id << " for " << seconds << " seconds" << endl;
 	this_thread::sleep_for(chrono::seconds(seconds));
@@ -36,7 +36,7 @@ int main() {
 	srand(time(NULL));
 	jthread threads[NUM_JTHREADS];
 	for (int i = 0; i < NUM_JTHREADS; i++) {
-		threads[i] = jthread(sleep, i+1);
+		threads[i] = jthread(to_sleep, i+1);
 	}
 
 	cout << "Main thread resuming execution" << endl;
