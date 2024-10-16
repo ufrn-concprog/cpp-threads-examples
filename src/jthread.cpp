@@ -36,7 +36,7 @@ int main() {
 	srand(time(NULL));
 	jthread threads[NUM_JTHREADS];
 	for (int i = 0; i < NUM_JTHREADS; i++) {
-		threads[i] = thread(sleep, i+1);
+		threads[i] = jthread(sleep, i+1);
 	}
 
 	cout << "Main thread resuming execution" << endl;
