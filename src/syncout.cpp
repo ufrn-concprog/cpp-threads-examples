@@ -1,6 +1,6 @@
 /**
  * @file	jthread.cpp
- * @brief	Demonstrating the use of jthread objects provided by C++20
+ * @brief	Demonstrating the use of synchronized output stream and jthreads in C++20
  * @author	Everton Cavalcante (everton.cavalcante@ufrn.br)
  * @since	October 16, 2024
  * @date	October 16, 2024
