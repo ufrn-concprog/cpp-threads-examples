@@ -2,3 +2,5 @@
 .vscode/
 pthread.dSYM/
 src/pthread-basic.dSYM/
+bin/
+build/
