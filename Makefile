@@ -26,7 +26,7 @@ SRC_DIR=src
 PROG=$(example)
 
 # Compilation options
-FLAGS=-W -Wall -pedantic -std=c++11
+FLAGS=-W -Wall -pedantic -std=c++20
 
 # Target for the complete compilation, removing generated object files at the end
 all: $(PROG)
