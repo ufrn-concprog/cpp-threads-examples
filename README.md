@@ -16,7 +16,9 @@ Each file in this repository demonstrates a different function for thread progra
   ├─── doc                      ---> Directory where HTML documentation will be generated
   ├─── Makefile                 ---> Makefile for compilation
   └─── src                      ---> Directory with source code files
+       └─── jthread.cpp         ---> Demonstrating the use of jthread objects provided by C++20
        └─── pthread-basic.c     ---> Demonstrating basic programming with POSIX Threads in C
+       └─── syncout.cpp         ---> Demonstrating the use of synchronized output stream and jthreads in C++20
        └─── thread-callback.cpp ---> Demonstrating creation of C++ threads with a parameterized callback function
        └─── thread-class.cpp    ---> Demonstrating creation of threads to run class instances upon operator overloading
        └─── thread-class2.cpp   ---> Demonstrating creation of threads to run class instances upon object and method references
@@ -66,4 +68,4 @@ Finally, to execute the generated program, insert the following command into the
  ./bin/thread-simple
 ```
 
-In this case, the demonstration program to be executed is the one for the [`thread-simple`](src/thread-simple.cpp) example.
+In this case, the demonstration program to be executed is the one for [`thread-simple`](src/thread-simple.cpp) example.
