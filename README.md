@@ -82,6 +82,30 @@ To execute the generated program, insert the following command into the operatin
 
 In this case, the demonstration program to be executed is the one for [`thread-simple`](src/thread-simple.cpp) example.
 
+### 🗒️ Generating Documentation
+
+The generation of documentation is provided by [Doxygen](https://www.doxygen.nl). This process can be done either using the [Doxygen GUI](https://www.doxygen.nl/download.html) or manually using the operating system's terminal.
+
+#### Using the Doxygen GUI
+
+After downloading and installing the Doxygen GUI, the wizard can assist with creating and customizing the [Doxyfile](Doxyfile), the configuration file for the documentation generation, as well as running the documentation generation. The Doxyfile is a very long file, so using the tool is recommended to quickly locate specific tags to change.
+
+#### Using the operating system's terminal
+
+Enter this command to generate the [`Doxyfile`](Doxyfile):
+
+```bash
+doxygen -g
+```
+
+To generate the documentation itself, enter this:
+
+```bash
+doxygen
+```
+
+This will generate documentation for all source code files within the [`src`](src) directory into the [`doc`](doc) directory. The [Doxyfile](Doxyfile) provided in this repository allows automatically generating only documentation as HTML pages.
+
 ---
 
 ## 🤝 Contributing
