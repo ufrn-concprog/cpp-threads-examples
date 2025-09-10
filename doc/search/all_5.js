@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['print_0',['print',['../pthread-basic_8c.html#a8e845a26de9133ad4d9f18d03bfef457',1,'pthread-basic.c']]],
-  ['pthread_2dbasic_2ec_1',['pthread-basic.c',['../pthread-basic_8c.html',1,'']]]
+  ['operator_28_29_0',['operator()',['../class_display_thread.html#a27a7113fdaf21df03f790b84a44d20d9',1,'DisplayThread']]]
 ];

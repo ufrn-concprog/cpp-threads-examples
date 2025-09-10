@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Programming with threads in C and C++: src/pthread-basic.c File Reference</title>
+<title>Programming with threads in C and C++: src/jthread.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -90,54 +90,63 @@ $(function(){ initResizable(false); });
 <div id="doc-content">
 <div class="header">
   <div class="summary">
+<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
-  <div class="headertitle"><div class="title">pthread-basic.c File Reference</div></div>
+  <div class="headertitle"><div class="title">jthread.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Demonstrating basic programming with POSIX Threads in C.  
+<p>Demonstrating the use of jthread objects provided by C++20.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
-<code>#include &lt;unistd.h&gt;</code><br />
-<code>#include &lt;stdlib.h&gt;</code><br />
-<code>#include &lt;string.h&gt;</code><br />
-<code>#include &lt;pthread.h&gt;</code><br />
+<div class="textblock"><code>#include &lt;chrono&gt;</code><br />
+<code>#include &lt;cstdlib&gt;</code><br />
+<code>#include &lt;ctime&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;thread&gt;</code><br />
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a07c207e5946261ac1da2dacbb3337026" id="r_a07c207e5946261ac1da2dacbb3337026"><td class="memItemLeft" align="right" valign="top"><a id="a07c207e5946261ac1da2dacbb3337026" name="a07c207e5946261ac1da2dacbb3337026"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>NUM_JTHREADS</b>&#160;&#160;&#160;5</td></tr>
+<tr class="memdesc:a07c207e5946261ac1da2dacbb3337026"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of jthreads to create. <br /></td></tr>
+<tr class="separator:a07c207e5946261ac1da2dacbb3337026"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a8e845a26de9133ad4d9f18d03bfef457" id="r_a8e845a26de9133ad4d9f18d03bfef457"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e845a26de9133ad4d9f18d03bfef457">print</a> (void *arg)</td></tr>
-<tr class="memdesc:a8e845a26de9133ad4d9f18d03bfef457"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the argument received as input.  <br /></td></tr>
-<tr class="separator:a8e845a26de9133ad4d9f18d03bfef457"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3061c67fd793497269695a71e37d743d" id="r_a3061c67fd793497269695a71e37d743d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3061c67fd793497269695a71e37d743d">to_sleep</a> (int id)</td></tr>
+<tr class="memdesc:a3061c67fd793497269695a71e37d743d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suspends a given thread for a random number (between 1 and 5) of seconds.  <br /></td></tr>
+<tr class="separator:a3061c67fd793497269695a71e37d743d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4" id="r_ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top"><a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> ()</td></tr>
 <tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main function. <br /></td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Demonstrating basic programming with POSIX Threads in C. </p>
+<div class="textblock"><p>Demonstrating the use of jthread objects provided by C++20. </p>
+<p>Demonstrating the use of synchronized output stream and jthreads in C++20.</p>
 <dl class="section author"><dt>Author</dt><dd>Everton Cavalcante (<a href="#" onclick="location.href='mai'+'lto:'+'eve'+'rt'+'on.'+'ca'+'val'+'ca'+'nte'+'@u'+'frn'+'.b'+'r'; return false;">evert<span class="obfuscator">.nosp@m.</span>on.c<span class="obfuscator">.nosp@m.</span>avalc<span class="obfuscator">.nosp@m.</span>ante<span class="obfuscator">.nosp@m.</span>@ufrn<span class="obfuscator">.nosp@m.</span>.br</a>) </dd></dl>
-<dl class="section since"><dt>Since</dt><dd>November 29, 2021 </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>September 17, 2022 </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>October 16, 2024 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>October 16, 2024 </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a8e845a26de9133ad4d9f18d03bfef457" name="a8e845a26de9133ad4d9f18d03bfef457"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e845a26de9133ad4d9f18d03bfef457">&#9670;&#160;</a></span>print()</h2>
+<a id="a3061c67fd793497269695a71e37d743d" name="a3061c67fd793497269695a71e37d743d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3061c67fd793497269695a71e37d743d">&#9670;&#160;</a></span>to_sleep()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void * print </td>
+          <td class="memname">void to_sleep </td>
           <td>(</td>
-          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>arg</em></span></td><td>)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Prints the argument received as input. </p>
+<p>Suspends a given thread for a random number (between 1 and 5) of seconds. </p>
 <p>This is a callback function to run upon a thread </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">arg</td><td>Argument to the function pointer </td></tr>
+    <tr><td class="paramname">id</td><td>Thread's ID </td></tr>
   </table>
   </dd>
 </dl>
