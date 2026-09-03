@@ -26,16 +26,17 @@ Each file in this repository demonstrates a different function for thread progra
 ├── Doxygen         # Documentation
 ├── Makefile        # Makefile for compilation
 ├── src             # Source code
-│   ├── jthread.cpp          # Demonstration of the use of jthread objects provided by C++20
-│   ├── pthread-basic.c      # Demonstration of basic programming with POSIX Threads in C
-│   ├── syncout.cpp          # Demonstration of the use of synchronized output stream and jthreads in C++20
-│   ├── thread-callback.cpp  # Demonstration of thread creation with a parameterized callback function
-│   ├── thread-class.cpp     # Demonstration of thread creation to run class instances upon operator overloading
-│   ├── thread-class2.cpp    # Demonstration of thread creation to run class instances upon object and method references
-│   ├── thread-id.cpp        # Demonstration of thread creation and retrieval of their IDs
-│   ├── thread-lambda.cpp    # Demonstration of thread creation with a parameterized lambda
-│   ├── thread-simple.cpp    # Demonstration of thread creation to run a callback function
-│   ├── thread-sleep.cpp     # Demonstration of thread creation and suspension
+│   ├── jthread.cpp                       # Demonstration of the use of jthread objects provided by C++20
+│   ├── pthread-basic.c                   # Demonstration of basic programming with POSIX Threads in C
+│   ├── syncout.cpp                       # Demonstration of the use of synchronized output stream and jthreads in C++20
+│   ├── thread-callback.cpp               # Demonstration of thread creation with a parameterized callback function
+│   ├── thread-class.cpp                  # Demonstration of thread creation to run class instances upon operator overloading
+│   ├── thread-class2.cpp                 # Demonstration of thread creation to run class instances upon object and method references
+│   ├── thread-hardware-concurrency.cpp   # Demonstration of obtaining hardware concurrency and creating matching worker threads
+│   ├── thread-id.cpp                     # Demonstration of thread creation and retrieval of their IDs
+│   ├── thread-lambda.cpp                 # Demonstration of thread creation with a parameterized lambda
+│   ├── thread-simple.cpp                 # Demonstration of thread creation to run a callback function
+│   ├── thread-sleep.cpp                  # Demonstration of thread creation and suspension
 └── README.md
 ```
 
