@@ -1,6 +1,6 @@
 /**
  * @file    thread-hardware-concurrency.cpp
- * @brief   Demonstrates obtaining hardware concurrency and creating matching worker threads
+ * @brief   Demonstrating obtaining hardware concurrency and creating matching worker threads
  * @author  Everton Cavalcante (everton.cavalcante@ufrn.br)
  * @since   September 2, 2026
  * @date    September 2, 2026
