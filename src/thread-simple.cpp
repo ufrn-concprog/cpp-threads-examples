@@ -1,5 +1,5 @@
 /**
- * @file	thread-id.cpp
+ * @file	thread-simple.cpp
  * @brief	Demonstrating creation of threads to run a callback function
  * @author	Everton Cavalcante (everton.cavalcante@ufrn.br)
  * @since	November 29, 2021

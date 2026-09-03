@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Programming with threads in C and C++: src/jthread.cpp File Reference</title>
+<title>Programming with threads in C and C++: src/thread-simple.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -77,62 +77,47 @@ $(function() {
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
-  <div class="headertitle"><div class="title">jthread.cpp File Reference</div></div>
+  <div class="headertitle"><div class="title">thread-simple.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Demonstrating the use of jthread objects provided by C++20.  
+<p>Demonstrating creation of threads to run a callback function.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;chrono&gt;</code><br />
-<code>#include &lt;cstdlib&gt;</code><br />
-<code>#include &lt;ctime&gt;</code><br />
-<code>#include &lt;iostream&gt;</code><br />
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;thread&gt;</code><br />
 </div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a07c207e5946261ac1da2dacbb3337026" id="r_a07c207e5946261ac1da2dacbb3337026"><td class="memItemLeft"><a id="a07c207e5946261ac1da2dacbb3337026" name="a07c207e5946261ac1da2dacbb3337026"></a>
-#define&#160;</td><td class="memItemRight"><b>NUM_JTHREADS</b>&#160;&#160;&#160;5</td></tr>
-<tr class="memdesc:a07c207e5946261ac1da2dacbb3337026"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of jthreads to create. <br /></td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a3061c67fd793497269695a71e37d743d" id="r_a3061c67fd793497269695a71e37d743d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3061c67fd793497269695a71e37d743d">to_sleep</a> (int id)</td></tr>
-<tr class="memdesc:a3061c67fd793497269695a71e37d743d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suspends a given thread for a random number (between 1 and 5) of seconds.  <br /></td></tr>
+<tr class="memitem:a27a1864e1f4693766ae2596e6e205731" id="r_a27a1864e1f4693766ae2596e6e205731"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a27a1864e1f4693766ae2596e6e205731">hello</a> ()</td></tr>
+<tr class="memdesc:a27a1864e1f4693766ae2596e6e205731"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a greeting message on the standard output.  <br /></td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4" id="r_ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft"><a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
 int&#160;</td><td class="memItemRight"><b>main</b> ()</td></tr>
 <tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main function. <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Demonstrating the use of jthread objects provided by C++20. </p>
+<div class="textblock"><p>Demonstrating creation of threads to run a callback function. </p>
 <dl class="section author"><dt>Author</dt><dd>Everton Cavalcante (<a href="#" onclick="location.href='mai'+'lto:'+'eve'+'rt'+'on.'+'ca'+'val'+'ca'+'nte'+'@u'+'frn'+'.b'+'r'; return false;">evert<span class="obfuscator">.nosp@m.</span>on.c<span class="obfuscator">.nosp@m.</span>avalc<span class="obfuscator">.nosp@m.</span>ante<span class="obfuscator">.nosp@m.</span>@ufrn<span class="obfuscator">.nosp@m.</span>.br</a>) </dd></dl>
-<dl class="section since"><dt>Since</dt><dd>October 16, 2024 </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>October 16, 2024 </dd></dl>
+<dl class="section since"><dt>Since</dt><dd>November 29, 2021 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>September 17, 2022 </dd></dl>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="a3061c67fd793497269695a71e37d743d" name="a3061c67fd793497269695a71e37d743d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3061c67fd793497269695a71e37d743d">&#9670;&#160;</a></span>to_sleep()</h2>
+<a id="a27a1864e1f4693766ae2596e6e205731" name="a27a1864e1f4693766ae2596e6e205731"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27a1864e1f4693766ae2596e6e205731">&#9670;&#160;</a></span>hello()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void to_sleep </td>
+          <td class="memname">void hello </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Suspends a given thread for a random number (between 1 and 5) of seconds. </p>
-<p>This is a callback function to run upon a thread </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">id</td><td>Thread's ID </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Prints a greeting message on the standard output. </p>
+<p>This is a callback function to run upon a thread </p>
 
 </div>
 </div>

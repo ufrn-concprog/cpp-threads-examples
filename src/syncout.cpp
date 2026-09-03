@@ -1,5 +1,5 @@
 /**
- * @file	jthread.cpp
+ * @file	syncout.cpp
  * @brief	Demonstrating the use of synchronized output stream and jthreads in C++20
  * @author	Everton Cavalcante (everton.cavalcante@ufrn.br)
  * @since	October 16, 2024
