@@ -14,7 +14,7 @@ RM=rm -rf		# Windows: cmd //C del
 MKDIR=mkdir
 
 # Compiler
-CC=g++
+CC=g++-15
 
 # Directory variables
 BIN_DIR=bin
