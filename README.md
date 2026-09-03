@@ -33,6 +33,7 @@ Each file in this repository demonstrates a different function for thread progra
 │   ├── thread-class.cpp     # Demonstration of thread creation to run class instances upon operator overloading
 │   ├── thread-class2.cpp    # Demonstration of thread creation to run class instances upon object and method references
 │   ├── thread-id.cpp        # Demonstration of thread creation and retrieval of their IDs
+│   ├── thread-lambda.cpp    # Demonstration of thread creation with a parameterized lambda
 │   ├── thread-simple.cpp    # Demonstration of thread creation to run a callback function
 │   ├── thread-sleep.cpp     # Demonstration of thread creation and suspension
 └── README.md
