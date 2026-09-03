@@ -16,8 +16,6 @@ This educational repository features a set of illustrative examples that demonst
 
 This project is part of the **Concurrent Programming** module at the [Federal University of Rio Grande do Norte (UFRN)](https://www.ufrn.br), Natal, Brazil.
 
----
-
 ## 📂 Repository Structure
 
 Each file in this repository demonstrates a different function for thread programming with C and C++. The files are organized according to the following structure:
@@ -39,8 +37,6 @@ Each file in this repository demonstrates a different function for thread progra
 │   ├── thread-sleep.cpp     # Demonstration of thread creation and suspension
 └── README.md
 ```
-
----
 
 ## 🚀 Getting Started
 
@@ -104,15 +100,11 @@ To generate the documentation itself, enter this:
 doxygen
 ```
 
-This will generate documentation for all source code files within the [`src`](src) directory into the [`doc`](doc) directory. The [Doxyfile](Doxyfile) provided in this repository allows automatically generating only documentation as HTML pages.
-
----
+This will generate documentation for all source code files within the [`src`](src) directory and place it in the [`doc`](doc) directory. The [Doxyfile](Doxyfile) provided in this repository allows for the automatic generation of documentation as HTML pages.
 
 ## 🤝 Contributing
 
 Contributions are welcome! Fork this repository and submit a pull request 🚀
-
----
 
 ## 📜 License
 
