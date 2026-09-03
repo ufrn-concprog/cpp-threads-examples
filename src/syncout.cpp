@@ -13,8 +13,6 @@
 #include <syncstream>
 #include <thread>
 
-using namespace std;
-
 /** @brief Number of jthreads to create */
 #define NUM_JTHREADS 5
 
@@ -26,9 +24,9 @@ using namespace std;
 void to_sleep(int id) {
 	int seconds = rand() % 5 + 1;
     std::osyncstream sync_cout(std::cout);
-	sync_cout << "Suspending thread " << id << " for " << seconds << " seconds" << endl;
-	this_thread::sleep_for(chrono::seconds(seconds));
-	sync_cout << "Thread " << id << " resuming execution" << endl;
+	sync_cout << "Suspending thread " << id << " for " << seconds << " seconds" << std::endl;
+	std::this_thread::sleep_for(std::chrono::seconds(seconds));
+	sync_cout << "Thread " << id << " resuming execution" << std::endl;
 }
 
 /**
@@ -36,11 +34,11 @@ void to_sleep(int id) {
  */
 int main() {
 	srand(time(NULL));
-	jthread threads[NUM_JTHREADS];
+	std::jthread threads[NUM_JTHREADS];
 	for (int i = 0; i < NUM_JTHREADS; i++) {
-		threads[i] = jthread(to_sleep, i+1);
+		threads[i] = std::jthread(to_sleep, i+1);
 	}
 
-	cout << "Main thread resuming execution" << endl;
+    std::cout << "Main thread resuming execution" << std::endl;
 	return 0;
 }
