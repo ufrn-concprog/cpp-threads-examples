@@ -21,7 +21,7 @@ using std::vector;
  * @param id Identifier assigned to the worker thread
  */
 void doWork(int id) {
-    cout << "Worker " << id << " running on some core\n";
+    cout << "Worker " << id << " running on some core" << endl;
 }
 
 /**
@@ -33,12 +33,12 @@ int main() {
     // hardware_concurrency() can return 0 if the value is not computable/well-defined
     // on a given platform, so it is good practice to fall back to a sane default.
     if (numcores == 0) {
-        cout << "Unable to detect hardware concurrency; defaulting to 4\n";
+        cout << "Unable to detect hardware concurrency; defaulting to 4" << endl;
         numcores = 4;
     }
 
-    cout << "Detected " << numcores << " concurrent threads supported\n";
-    cout << "Creating " << numcores << " worker threads to match...\n\n";
+    cout << "Detected " << numcores << " concurrent threads supported" << endl;
+    cout << "Creating " << numcores << " worker threads to match..." << endl << endl;
 
     vector<thread> workers;
     for (unsigned int i = 0; i < numcores; ++i) {
