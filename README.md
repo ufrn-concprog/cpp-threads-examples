@@ -5,13 +5,13 @@
 ![Build](https://img.shields.io/badge/build-manual-lightgrey)
 [![Docs](https://img.shields.io/badge/doc-Doxygen-purple)](./doc/index.html)
 
-This educational repository features a set of illustrative examples that demonstrate the use of various threading functions in C and C++. The learning objectives are:
+This educational repository features illustrative examples that demonstrate how to use various threading functions in C and C++. The learning objectives are:
 
 - Demonstrate practical usage of key thread-related functions and methods, including but not limited to:
   - Creating and running POSIX Threads in C
   - Creating and running thread objects in C++11
   - Basic methods such as `join()`, `get_id()`, and `sleep_for()`
-- Demonstrate the new features for *jthreads* available at C++20
+- Demonstrate the new features for *jthreads* available in C++20
 - Serve as a reference for writing well-documented, multithreaded C++ code.
 
 This project is part of the **Concurrent Programming** module at the [Federal University of Rio Grande do Norte (UFRN)](https://www.ufrn.br), Natal, Brazil.
@@ -52,7 +52,7 @@ To compile and run [`jthread.cpp`](src/jthread.cpp) and [`syncout.cpp`](src/sync
 
 ### 🔧 Compilation
 
-The [Makefile](Makefile) was built to receive an input parameter named as `example`, whose value is the filename (without extension) of the respective demonstration source code (located at the [`src`](src) directory) to be be compiled and executed. The following command must be inserted into the operating system's terminal to compile the demonstration program:
+The [Makefile](Makefile) was built to receive an input parameter named `example`, whose value is the filename (without extension) of the respective demonstration source code (located in the [`src`](src) directory) to be compiled and executed. The following command must be inserted into the operating system's terminal to compile the demonstration program:
 
 ```bash
  make example=filename
@@ -64,9 +64,9 @@ Specifically for the demonstration of C programs working with [POSIX Threads](ht
  make example=filename pthread
 ```
 
-Note that the value for parameter `example` must be **exactly identical** to the filename of the source codes. If the parameter is not provided, the command `make` will do nothing. If the value does not correspond to the existing source codes, the command `make` will report an error point out that there is no defined rule for this parameter.
+Note that the value for parameter `example` must be **exactly identical** to the filename of the source code. If the parameter is not provided, the command `make` will do nothing. If the value does not match the existing source code files, `make` will report an error and note that no rule is defined for this parameter.
 
-In all the cases, generated object files will be stored inside the `build` directory and the executable program will be stored inside the `bin` directory. These directories are automatically created in the first run of the [`Makefile`](Makefile).
+In all cases, generated object files are stored in the `build` directory, and the executable program is stored in the `bin` directory. The first run of the [`Makefile`](Makefile) automatically creates these directories.
 
 ### ▶️ Running
 
@@ -76,15 +76,15 @@ To execute the generated program, insert the following command into the operatin
  ./bin/thread-simple
 ```
 
-In this case, the demonstration program to be executed is the one for [`thread-simple`](src/thread-simple.cpp) example.
+In this case, the demonstration program is the [`thread-simple`](src/thread-simple.cpp) example.
 
 ### 🗒️ Generating Documentation
 
-The generation of documentation is provided by [Doxygen](https://www.doxygen.nl). This process can be done either using the [Doxygen GUI](https://www.doxygen.nl/download.html) or manually using the operating system's terminal.
+[Doxygen](https://www.doxygen.nl) generates the documentation. This can be done either using the [Doxygen GUI](https://www.doxygen.nl/download.html) or manually in the operating system's terminal.
 
 #### Using the Doxygen GUI
 
-After downloading and installing the Doxygen GUI, the wizard can assist with creating and customizing the [Doxyfile](Doxyfile), the configuration file for the documentation generation, as well as running the documentation generation. The Doxyfile is a very long file, so using the tool is recommended to quickly locate specific tags to change.
+After downloading and installing the Doxygen GUI, the wizard can help create and customize the [Doxyfile](Doxyfile), the configuration file for documentation generation, and run the documentation generation. The Doxyfile is very long, so using the tool is recommended to quickly locate specific tags to change.
 
 #### Using the operating system's terminal
 
@@ -100,7 +100,7 @@ To generate the documentation itself, enter this:
 doxygen
 ```
 
-This will generate documentation for all source code files within the [`src`](src) directory and place it in the [`doc`](doc) directory. The [Doxyfile](Doxyfile) provided in this repository allows for the automatic generation of documentation as HTML pages.
+This generates documentation for all source code files in the [`src`](src) directory and places it in the [`doc`](doc) directory. The [Doxyfile](Doxyfile) provided in this repository automatically generates documentation as HTML pages.
 
 ## 🤝 Contributing
 
